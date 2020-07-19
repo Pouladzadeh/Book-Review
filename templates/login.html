@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class='my-2 p-1 text-center container'>{{log_in_message}}</div>
+    <div class="container">
+        <div class="row justify-content-center">
+         <div class="col-12 col-md-6 col-lg-6 ">
+            <form class='form-inline border p-3 bg-light' action="{{url_for('login')}}" method="post">
+
+                <h3 class="my-4">Signup</h3>
+                <input class='form-control w-100 m-1' type="email"  name="email" placeholder="Email" required>   
+                <input class='form-control w-100 m-1' type="password" id='userPassword' onkeyup="passwordMatch()" name="userPassword" minlength="8" maxlength="15" placeholder="password"required > 
+                <input class='form-control w-100 m-1' type="password" id='userPasswordRepeat' onkeyup="passwordMatch()" name="userPasswordRepeat" minlength="8" maxlength="15" placeholder="repeat password" required>
+
+         </fieldset> <!-- fieldset-->
+            <button class="btn btn-primary m-1 w-50" type="submit">Signup</button>
+            </div> <!-- row -->
+            </div> <!-- col -->
+        </form>
+<hr>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-6 ">
+        <form class='form-inline border p-3 bg-light' action="{{url_for('login')}}"  method="post">
+
+            <h3 class="my-4">Signin</h3>
+            <input class='form-control w-100 m-1' type="email" name="emailLogIn" placeholder="Email" required> 
+            <input class='form-control w-100 m-1' type="password"  name="userPasswordLogIn" placeholder="password" required>
+            <button class="btn btn-primary m-1 w-50" type="submit">signin</button>
+
+    </div> <!-- row -->
+    </div><!-- col -->
+        </form>
+    </div>  <!-- container -->
+        
+{% endblock %}
