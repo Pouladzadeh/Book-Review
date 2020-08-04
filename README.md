@@ -13,6 +13,9 @@
 # ENV Variables
 
 $ export FLASK_APP = application.py
+
 $ export DATABASE_URL = Your Heroku Postgres DB URI
+
 $ export FLASK_DEBUG = 1
+
 $ export GOODREADS_KEY = Your Goodreads Developer API Key # See: https://www.goodreads.com/api
